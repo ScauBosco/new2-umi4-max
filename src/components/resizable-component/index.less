@@ -1,0 +1,27 @@
+@right-min-width: 35%;
+@right-max-width: 50%;
+@splitter-min-width: 5px;
+
+.resize-wrap {
+  padding: 0 24px 24px;
+}
+.re-layout {
+  display: flex;
+  box-sizing: border-box;
+  height: calc(100vh - 40px);
+}
+.left-resizer {
+  min-width: calc(50% - @splitter-min-width);
+  max-width: calc(100% - @right-min-width - @splitter-min-width);
+}
+.leftLayout {
+  width: 100%;
+  height: 100%;
+  // background-color: #b9b4b4;
+}
+.splitter {
+  min-width: @splitter-min-width;
+  background-image: linear-gradient(#ddd 33%, transparent 0);
+  background-size: 2px 1px;
+  cursor: col-resize;
+}
